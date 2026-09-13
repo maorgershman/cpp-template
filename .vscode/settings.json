@@ -1,0 +1,38 @@
+{
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
+    "cmake.debugConfig": {
+        "type": "lldb",
+        "request": "launch"
+    },
+    "clangd.arguments": [
+        "--background-index",
+        "--completion-style=detailed"
+    ],
+    "cmake.revealLog": "error",
+    "cmake.options.statusBarVisibility": "hidden",
+    "cmake.options.advanced": {
+        "build": {
+            "statusBarVisibility": "icon"
+        },
+        "buildPreset": {
+            "statusBarVisibility": "visible"
+        },
+        "debug": {
+            "statusBarVisibility": "icon"
+        },
+        "launch": {
+            "statusBarVisibility": "icon"
+        },
+        "ctest": {
+            "statusBarVisibility": "icon"
+        }
+    },
+    "debug.showInStatusBar": "never",
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    }
+}

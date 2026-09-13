@@ -1,0 +1,52 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "debug-base",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_OVERLAY_TRIPLETS": "${sourceDir}/vcpkg-triplets"
+      }
+    },
+    {
+      "name": "debug-x64",
+      "inherits": "debug-base",
+      "cacheVariables": {
+        "VCPKG_TARGET_TRIPLET": "x64-linux-clang"
+      }
+    },
+    {
+      "name": "debug-arm64",
+      "inherits": "debug-base",
+      "cacheVariables": {
+        "VCPKG_TARGET_TRIPLET": "arm64-linux-clang"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "debug-x64",
+      "configurePreset": "debug-x64"
+    },
+    {
+      "name": "debug-arm64",
+      "configurePreset": "debug-arm64"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "debug-x64",
+      "configurePreset": "debug-x64"
+    },
+    {
+      "name": "debug-arm64",
+      "configurePreset": "debug-arm64"
+    }
+  ]
+}
