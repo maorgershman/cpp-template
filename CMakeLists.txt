@@ -1,9 +1,6 @@
-cmake_minimum_required(VERSION 3.21)
-project(cpp-template LANGUAGES C CXX)
+cmake_minimum_required(VERSION 3.30)
+project(cpp-template LANGUAGES CXX)
 
-set(CMAKE_C_STANDARD 23)
-set(CMAKE_C_STANDARD_REQUIRED ON)
-set(CMAKE_C_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD 26)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
