@@ -1,7 +1,8 @@
 {
-  "name": "cpp-template",
+  "name": "my-project",
   "version": "0.1.0",
   "dependencies": [
-    "catch2"
+    "bext-ut",
+    "mimicpp"
   ]
 }
