@@ -26,6 +26,9 @@ target_compile_options(project_options
         -Wformat=2
         -Wimplicit-fallthrough
 
+        # mimic++ relies on __COUNTER__, which clang flags under -Wpedantic
+        -Wno-c2y-extensions
+
         # Debug
         $<$<CONFIG:Debug>:
             -O0
